@@ -1,0 +1,74 @@
+﻿@model MagicVilla_Web.Models.Dto.VillaCreateDTO
+
+<form asp-action="CreateVilla">
+    <br/>
+    <div class="container border p-3">
+        <h1 class="text-primary">Create Villa</h1>
+        <hr/>
+
+        <div class="row">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="col-2">
+                <label asp-for="name" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="name" class="form-control" />
+                <span asp-validation-for="name" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="rate" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="rate" class="form-control" />
+                <span asp-validation-for="rate" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="details" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <textarea asp-for="details" class="form-control" rows="5" ></textarea>
+                <span asp-validation-for="details" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="imageUrl" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="imageUrl" class="form-control" />
+                <span asp-validation-for="imageUrl" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="occupancy" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="occupancy" class="form-control" />
+                <span asp-validation-for="occupancy" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="sqft" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <input asp-for="sqft" class="form-control" />
+                <span asp-validation-for="sqft" class="text-danger"></span>
+            </div>
+
+            <div class="col-2">
+                <label asp-for="amenity" class="control-label pt-2" style="font-size:20px;"></label>
+            </div>
+            <div class="col-10">
+                <textarea asp-for="amenity" class="form-control" ></textarea>
+                <span asp-validation-for="amenity" class="text-danger"></span>
+            </div>
+
+            <div class="col-5 offset-2">
+                <a asp-action="IndexVilla" class="btn-primary btn form-control">Back to List</a>
+            </div>
+
+        </div>
+    </div>
+</form>
